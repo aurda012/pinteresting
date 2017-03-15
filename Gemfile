@@ -20,7 +20,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'postresql'
+  gem 'postgresql'
   gem 'rails_12factor'
 end
 
