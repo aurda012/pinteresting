@@ -1,24 +1,13 @@
-# README
+#Pinteresting Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Ruby on Rails 5 application that allows users to post pictures with descriptions as a "Pin" on their profile.
+### Features
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Bootstrap Styling
+- Devise User Authentication
+- Friendly User Login and Sign Up
+- Easy to use interface
+- User and pins association
+- Paperclip and ImageMagick implementation
+- Styling with JQuery Masonry
+- Icons with Glyphicons
