@@ -1,35 +1,39 @@
-<nav class="navbar navbar-static-top navbar-default" role="navigation">
-<div class="container">
-<!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "Pinteresting", root_path, class: "navbar-brand" %>
-    </div>
+<section id="menu-0">
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
+        <div class="container">
 
-    <div class="collapse navbar-collapse navbar-ex1-collapse"> 
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li>
-            <%= link_to new_pin_path do %>
-              <span class="glyphicon glyphicon-plus"></span> New Pin
-            <% end %>
-        </li>
-        <li><%= link_to "About", about_path %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign In!", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav>
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
 
+                    <div class="navbar-brand">
+                        <a href="/" class="mbr-iconfont mbr-iconfont-menu navbar-logo" style="color: rgb(0, 0, 0);"><i class="fa fa-camera" aria-hidden="true"></i></a>
+                        <a class="navbar-caption text-primary" href="/">Pinteresting</a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown nav-btn-right collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link" href="/pin/new"><span class="mbr-iconfont mbr-iconfont-btn" style="color: #b8312f;"></span><i class="fa fa-plus" aria-hidden="true"></i> New Pin </a>
+                        </li>
+                        <li class="nav-item nav-btn">
+                            <a class="nav-link btn btn-primary-outline btn-primary" href="/usersessions/new">Sign In</a>
+                        </li>
+                    </ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>

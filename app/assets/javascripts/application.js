@@ -11,10 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.touch-swipe.min
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
-//= require bootstrap
+//= require tether
+//= require smooth-scroll
+//= require dropdown.min
+//= require jarallax
+//= require theme
 //= require turbolinks
-//= require jquery.turbolinks
 //= require_tree .
