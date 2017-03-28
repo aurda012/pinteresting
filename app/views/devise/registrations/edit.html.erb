@@ -1,43 +1,58 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <div class="panel-title">
-      <h1>Edit <%= resource_name.to_s.humanize %></h1>
+<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background mbr-after-navbar mbr-bg-image" id="header2-3">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
     </div>
-  </div>
-  <div class="panel-body">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-      <%= devise_error_messages! %>
 
-      <div class="form-group">
-       <%= f.label :name %>
-       <%= f.text_field :name, class: "form-control", :autofocus => true %>
-      </div>
+      <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">      
+          <div class="container container-signup">
+            <div class="mbr-section mbr-signup">                     
 
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control", :autofocus => true %>
-      </div>
 
-      <div class="form-group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
-      </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h1>Edit <%= resource_name.to_s.humanize %></h1>
+                  </div>
 
-      <div class="form-group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-        <%= f.password_field :current_password, class: "form-control" %>
-      </div>
+                  <div class="panel-body">
+                    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+                      <%= devise_error_messages! %>
 
-      <div class="form-group">
-        <%= f.submit "Update", class: "btn btn-primary" %>
-      </div>
-    <% end %>
-  </div>
-  <div class="panel-footer">
-    <h3>Cancel my account</h3>
+                      <div class="form-group text-white">
+                       <%= f.label :name, style: "padding-top: 15px;" %>
+                       <%= f.text_field :name, class: "form-control", :autofocus => true %>
+                      </div>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
+                      <div class="form-group text-white">
+                        <%= f.label :email %>
+                        <%= f.email_field :email, class: "form-control", :autofocus => true %>
+                      </div>
 
-    <%= link_to "Back", :back %>
-  </div>
-</div>
+                      <div class="form-group text-white">
+                        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+                        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
+                      </div>
+
+                      <div class="form-group text-white">
+                        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+                        <%= f.password_field :current_password, class: "form-control" %>
+                      </div>
+
+                      <div class="form-group">
+                        <%= f.submit "Update", class: "btn btn-primary" %>
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="panel-footer text-white">
+                    <h3>Cancel my account</h3>
+
+                    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), style: "color: white;", :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
+
+                    <%= link_to "Back", :back, style: "color: white;" %>
+                  </div>
+                </div>
+
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+</section> 
