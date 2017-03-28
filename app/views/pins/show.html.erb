@@ -1,22 +1,42 @@
-<%= link_to 'Back', pins_path %>
-
-<div class="row">
-  <div class="col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
-    <div class="panel-heading center">
-      <%= image_tag @pin.image.url(:medium) %>
+<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background mbr-after-navbar mbr-bg-image" id="header2-3">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
     </div>
-    <div class="panel-body">
-    <p><%= @pin.description %></p>
-    <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
-    <% if current_user && @pin.user == current_user %>
-      <%= link_to edit_pin_path(@pin) do %>
-        <span class="glyphicon glyphicon-edit"></span>
-        Edit
-      <% end %>
-    <% end %>
-    </div>
-  </div>
+      <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">  
+          <div class="container">
 
-</div>
+            <%= link_to pins_path, style: "color: black;" do %>
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+              Back
+            <% end %>
+
+            
+              <div class="card card-inverse" style="width: 340px; position: relative; background-color: #333; border-color: #333;">
+                <div class="card-block">
+                  <div class="box">
+                      
+                        
+                          <div class="panel-heading center">
+                            <%= image_tag @pin.image.url(:medium) %>
+                          </div>
+                          <div class="panel-body">
+                          <p><%= @pin.description %></p>
+                          <p><strong><%= @pin.user.name if @pin.user %></strong></p>
+
+                          <% if current_user && @pin.user == current_user %>
+                            <%= link_to edit_pin_path(@pin), style: "color: black;" do %>
+                              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                              Edit
+                            <% end %>
+                          <% end %>
+                          </div>
+                  </div>  
+                </div>    
+              </div>      
+                  
+
+          </div>
+        </div> 
+      </div> 
+</section>

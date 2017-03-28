@@ -1,34 +1,49 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1>Sign up!</h1>
-  </div>
+<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background mbr-after-navbar mbr-bg-image" id="header2-3">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);">
+    </div>
 
-  <div class="panel-body">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+      <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">      
+          <div class="container container-signup">
+            <div class="mbr-section mbr-signup">                     
 
-      <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true, class: "form-control" %>
-      </div>
 
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h1>Sign up!</h1>
+                        </div>
 
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
+                        <div class="panel-body">
+                          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+                            <%= devise_error_messages! %>
 
-      <div class="form-group">
-        <%= f.submit "Sign up", class: "btn btn-primary" %>
-      </div>
-    <% end %>
-  </div>
+                            <div class="form-group">
+                              <%= f.label :name %>
+                              <%= f.text_field :name, autofocus: true, class: "form-control" %>
+                            </div>
 
-  <div class="panel-footer">
-    <%= render "devise/shared/links" %>
-  </div>
-</div>
+                            <div class="form-group">
+                              <%= f.label :email %>
+                              <%= f.email_field :email, autofocus: true, class: "form-control" %>
+                            </div>
+
+                            <div class="form-group">
+                              <%= f.label :password %>
+                              <%= f.password_field :password, class: "form-control" %>
+                            </div>
+
+                            <div class="form-group">
+                              <%= f.submit "Sign up", class: "btn btn-primary" %>
+                            </div>
+                          <% end %>
+                        </div>
+
+                        <div class="panel-footer">
+                          <%= render "devise/shared/links" %>
+                        </div>
+                </div>
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+</section>

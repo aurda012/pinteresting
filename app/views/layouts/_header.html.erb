@@ -8,7 +8,7 @@
 
                     <div class="navbar-brand">
                         <a href="/" class="mbr-iconfont mbr-iconfont-menu navbar-logo" style="color: rgb(0, 0, 0);"><i class="fa fa-camera" aria-hidden="true"></i></a>
-                        <a class="navbar-caption text-primary" href="/">Pinteresting</a>
+                        <%= link_to "Pinteresting", root_path, class: "navbar-caption text-primary" %>
                     </div>
 
                 </div>
@@ -20,11 +20,25 @@
 
                     <ul class="nav-dropdown nav-btn-right collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
                         <li class="nav-item dropdown">
-                            <a class="nav-link link" href="/pin/new"><span class="mbr-iconfont mbr-iconfont-btn" style="color: #b8312f;"></span><i class="fa fa-plus" aria-hidden="true"></i> New Pin </a>
+                            <%= link_to "Home", root_path, class: "mbr-iconfont mbr-iconfont-btn", style: "color: black;" %>
                         </li>
-                        <li class="nav-item nav-btn">
-                            <a class="nav-link btn btn-primary-outline btn-primary" href="/usersessions/new">Sign In</a>
+                        <li class="nav-item dropdown">
+                            <%= link_to new_pin_path, class: "mbr-iconfont mbr-iconfont-btn", style: "color: #b8312f;" do %>
+                                <i class="fa fa-plus" aria-hidden="true"></i> New Pin
+                            <% end %>
                         </li>
+                        <% if user_signed_in? %>
+                            <li class="nav-item nav-btn">
+                                <%= link_to "Account Settings", edit_user_registration_path, class: "nav-link btn btn-primary-outline btn-primary" %>
+                            </li>
+                            <li class="nav-item nav-btn">
+                                <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link btn btn-primary-outline btn-primary" %>
+                            </li> 
+                        <% else %>        
+                            <li class="nav-item nav-btn">
+                                <%= link_to "Sign In!", new_user_session_path, class: "nav-link btn btn-primary-outline btn-primary" %>
+                            </li> 
+                        <% end %>
                     </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="close-icon"></div>

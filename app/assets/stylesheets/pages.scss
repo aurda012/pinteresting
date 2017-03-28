@@ -638,12 +638,26 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding-bottom: 120px;
 }
 
+.mbr-section-index {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .mbr-bg-image {
   background: image-url('landscape.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.mbr-bg-show {
+  background: image-url('landscape.jpg');
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .mbr-section-full {
   display: table;
@@ -2032,8 +2046,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* for buttons */
 .mbr-iconfont.mbr-iconfont-btn,
 .mbr-buttons__btn .mbr-iconfont {
-  padding-right: 0.4em;
-  font-size: 1.6em;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 1em;
   line-height: 0.5em;
   vertical-align: text-bottom;
   position: relative;
@@ -2392,8 +2407,8 @@ h6,
 }
 .btn-primary-outline {
   background: none;
-  border-color: #671b1a;
-  color: #671b1a;
+  border-color: #b8312f;
+  color: black;
 }
 .btn-primary-outline:hover,
 .btn-primary-outline:focus,
@@ -2733,3 +2748,12 @@ h6,
   color: #b8312f;
 }
 
+.container-signup {
+  position: middle;
+  width: 550px;
+}
+
+.mbr-signup {
+  position: center;
+  width: 550px;
+}
